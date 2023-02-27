@@ -14,20 +14,18 @@ using System.Text;
     3)реализовав метод, выводящий на экран значение определенного поля;
     4)одно из числовых полей вывести в шестнадцатеричном представлении.
  */
+
 internal class Program
 {
     private static void Main(string[] args)
     {
-        Console.OutputEncoding = Encoding.UTF8;
-        Console.InputEncoding = Encoding.UTF8;
+       
         UI.PrintHeader();
         List<TrainStation> stations = new();
         TrainStation station = new("Москва", 500, 200, "Центральный район", 10, 1500m, true);
         TrainStation station2 = new("Сочи", 200, 500, "Приморский район", 100, 15000m, false);
         stations.Add(station);
         stations.Add(station2);
-        UI.PrintInfo(station);
-        UI.PrintInfo(station2);
         UI.PrintIntToHex(station2.GetIntField("seatsNumber"));
         UI.Start(stations);
     }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "\\\\Mac\\Home\\Documents\\Lab1\\Lab1\\Lab1.csproj": {}
+    "C:\\Users\\izgar\\source\\repos\\Lab1_OOP\\Lab1\\Lab1.csproj": {}
   },
   "projects": {
-    "\\\\Mac\\Home\\Documents\\Lab1\\Lab1\\Lab1.csproj": {
+    "C:\\Users\\izgar\\source\\repos\\Lab1_OOP\\Lab1\\Lab1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "\\\\Mac\\Home\\Documents\\Lab1\\Lab1\\Lab1.csproj",
+        "projectUniqueName": "C:\\Users\\izgar\\source\\repos\\Lab1_OOP\\Lab1\\Lab1.csproj",
         "projectName": "Lab1",
-        "projectPath": "\\\\Mac\\Home\\Documents\\Lab1\\Lab1\\Lab1.csproj",
-        "packagesPath": "C:\\Users\\egorunlucked\\.nuget\\packages\\",
-        "outputPath": "\\\\Mac\\Home\\Documents\\Lab1\\Lab1\\obj\\",
+        "projectPath": "C:\\Users\\izgar\\source\\repos\\Lab1_OOP\\Lab1\\Lab1.csproj",
+        "packagesPath": "C:\\Users\\izgar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\izgar\\Source\\Repos\\Lab1_OOP\\Lab1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\egorunlucked\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\izgar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
