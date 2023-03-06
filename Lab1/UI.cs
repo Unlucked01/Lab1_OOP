@@ -17,8 +17,8 @@ namespace Lab1
         /// </summary>
         public static void PrintHeader()
         {
-            Console.WriteLine("Бригада №3: Изгарев && Копылов\n" + "Предметная область: Вокзал.");
-            delim();
+            Console.WriteLine("Лабораторная работа №1: Класс. Создание объекта. Работа с консолью \nБригада №3: Изгарев && Копылов\n" + "Предметная область: Вокзал.");
+            Delim();
         }
         /// <summary>
         /// Вывод в консоль числа в шестнадцатиричной системе счислениия
@@ -27,7 +27,7 @@ namespace Lab1
         public static void PrintIntToHex(int intValue)
         {
             Console.WriteLine($"Представление чилового значения поля ({intValue}) в HEX-формате: " + intValue.ToString("X")) ;
-            delim();
+            Delim();
         }
         /// <summary>
         /// Выбор станции пользователем
@@ -39,7 +39,7 @@ namespace Lab1
             Console.WriteLine("Выберите станцию: \nДля выхода введите - 0");
             for (int i = 0; i < stations.Count; i++)
             {
-                Console.WriteLine($"{i + 1} - {stations[i].stationName}");
+                Console.WriteLine($"{i + 1} - {stations[i].StationName}");
             }
             Console.Write("Введите число - ");
             return Console.ReadLine();
@@ -63,27 +63,34 @@ namespace Lab1
         /// Позволяет взаимодействовать пользователю с консоль
         /// </summary>
         /// <param name="stations">Список существующих объектов</param>
-        public static void Start(List<TrainStation> stations)
+        public static void Start()
         {
-            foreach(TrainStation station in stations)
+            PrintHeader();
+            List<TrainStation> stations = new();
+            TrainStation station1 = new("Москва", 500, 200, "Центральный район", 10, 15.00m, true);
+            TrainStation station2 = new("Сочи", 200, 500, "Приморский район", 100, 150.00m, false);
+            stations.Add(station1);
+            stations.Add(station2);
+            PrintIntToHex(station2.GetIntField("SeatsNumber"));
+            foreach (TrainStation station in stations)
             {
                 Console.WriteLine(station.ToString());
-                delim();
+                Delim();
             }
             string? stationOption = ChooseStations(stations);
-            while (!validate(stationOption, 0, stations.Count))
+            while (!Validate(stationOption, 0, stations.Count))
             {
                 Console.Write("Введите число - ");
                 stationOption = Console.ReadLine();
             }
             while (stationOption != "0")
             {
-                delim();
+                Delim();
                 PrintOptions();
-                delim();
+                Delim();
                 Console.Write("Введите число - ");
                 string? option = Console.ReadLine();
-                delim();
+                Delim();
 
                 Regex regexStr = new(@"^\p{IsCyrillic}+\s*\p{IsCyrillic}*$", RegexOptions.IgnorePatternWhitespace);
                 Regex regexDecimal = new(@"^\d+,\d+$", RegexOptions.IgnorePatternWhitespace);
@@ -95,90 +102,90 @@ namespace Lab1
                     case "1":
                         Console.Write("Введите новое название станции: ");
                         string? inputUser = Console.ReadLine();
-                        while (!validate(regexStr, inputUser))
+                        while (!Validate(regexStr, inputUser))
                         {
                             Console.Write("Введите корректное название станции(допускаются только символы Кириллицы): ");
                             inputUser = Console.ReadLine();
                         }
-                        stations[stOption - 1].stationName = inputUser;
+                        stations[stOption - 1].StationName = inputUser;
                         break;
                     case "2":
                         Console.Write("Введите новое число сидячих мест: ");
                         inputUser = Console.ReadLine();
-                        while (!validate(inputUser,0,int.MaxValue))
+                        while (!Validate(inputUser,0,int.MaxValue))
                         {
                             Console.Write("Введите корректное чило сидячих мест: ");
                             inputUser = Console.ReadLine();
                         }
-                        stations[stOption - 1].seatsNumber = Int32.Parse(inputUser);
+                        stations[stOption - 1].SeatsNumber = Int32.Parse(inputUser);
                         break;
                     case "3":
                         Console.Write("Введите новое число проданных билетов: ");
                         inputUser = Console.ReadLine();
-                        while (!validate(inputUser, 0, int.MaxValue))
+                        while (!Validate(inputUser, 0, int.MaxValue))
                         {
                             Console.Write("Введите корректное число проданных билетов: ");
                             inputUser = Console.ReadLine();
                         }
-                        stations[stOption - 1].ticketsSold = Int32.Parse(inputUser);
+                        stations[stOption - 1].TicketsSold = Int32.Parse(inputUser);
                         break;
                     case "4":
                         Console.Write("Введите новое местоположение станции: ");
                         inputUser = Console.ReadLine();
-                        while (!validate(regexStr, inputUser))
+                        while (!Validate(regexStr, inputUser))
                         {
                             Console.Write("Введите корректное местоположение станции(допускаются только символы Кириллицы): ");
                             inputUser = Console.ReadLine();
                         }
-                        stations[stOption - 1].location = inputUser;
+                        stations[stOption - 1].Location = inputUser;
                         break;
                     case "5":
                         Console.Write("Введите новое число поездов в день: ");
                         inputUser = Console.ReadLine();
-                        while (!validate(inputUser,0,int.MaxValue))
+                        while (!Validate(inputUser,0,int.MaxValue))
                         {
                             Console.Write("Введите корректное число поездов в день: ");
                             inputUser = Console.ReadLine();
                         }
-                        stations[stOption - 1].trainsPerDay = Int32.Parse(inputUser);
+                        stations[stOption - 1].TrainsPerDay = Int32.Parse(inputUser);
                         break;
                     case "6":
                         Console.Write("Введите новые данные о средней стоимости билета: ");
                         inputUser = Console.ReadLine();
-                        while (!validate(regexDecimal, inputUser))
+                        while (!Validate(regexDecimal, inputUser))
                         {
                             Console.Write("Введите корректные данные о средней стоимости билета(неотрицательное вещественное число): ");
                             inputUser = Console.ReadLine();
                         }
-                        stations[stOption - 1].averageTicketPrice = Convert.ToDecimal(inputUser);
+                        stations[stOption - 1].AverageTicketPrice = Convert.ToDecimal(inputUser);
                         break;
                     case "7":
                         Console.Write("Введите новые данные о наличии WIFI: ");
                         inputUser = Console.ReadLine();
-                        while (!validate(regexBool, inputUser))
+                        while (!Validate(regexBool, inputUser))
                         {
                             Console.Write("Введите корректные данные о наличии WIFI(да или нет): ");
                             inputUser = Console.ReadLine();
                         }
                         if (inputUser == "Да" || inputUser == "да" || inputUser == "ДА")
                         {
-                            stations[stOption - 1].hasWiFi = true;
+                            stations[stOption - 1].HasWiFi = true;
                         }
                         else
                         {
-                            stations[stOption - 1].hasWiFi = false;
+                            stations[stOption - 1].HasWiFi = false;
                         }
                         break;
                 }
-                delim();
+                Delim();
                 Console.WriteLine(stations[stOption - 1].ToString());
-                delim();
+                Delim();
                 stationOption = ChooseStations(stations);
-                while (!validate(stationOption, 0, stations.Count))
+                while (!Validate(stationOption, 0, stations.Count))
                 {
-                    delim();
+                    Delim();
                     stationOption = Console.ReadLine();
-                    delim();
+                    Delim();
                 }
             }
         }
@@ -188,7 +195,7 @@ namespace Lab1
         /// <param name="reg">Шаблон регулярного выражения</param>
         /// <param name="str">Строка, введённая пользователем</param>
         /// <returns>Bool выражение прошли переданные данные проверку или нет</returns>
-        private static bool validate(Regex reg, string? str)
+        private static bool Validate(Regex reg, string? str)
         {
             return reg.IsMatch(str);
         }
@@ -199,12 +206,12 @@ namespace Lab1
         /// <param name="minNumber">Минимальное допустимое число</param>
         /// <param name="maxNumber">Максимальное допустимое число</param>
         /// <returns>Bool выражение прошли переданные данные проверку или нет</returns>
-        private static bool validate(string? str, int minNumber, int maxNumber)
+        private static bool Validate(string? str, int minNumber, int maxNumber)
         {
             int result;
             if(Int32.TryParse(str, out result))
             {
-                if(result >= minNumber && result < maxNumber) { 
+                if(result >= minNumber && result <= maxNumber) { 
                     return true;
                 }
                 else
@@ -218,9 +225,9 @@ namespace Lab1
             }
         }
         /// <summary>
-        /// 
+        /// Вывод строчного разделителя в консоль
         /// </summary>
-        private static void delim()
+        private static void Delim()
         {
             Console.WriteLine(new string('#', 40));
         }
