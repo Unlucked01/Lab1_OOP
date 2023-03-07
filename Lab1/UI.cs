@@ -9,7 +9,7 @@ using System.Text.RegularExpressions;
 
 namespace Lab1
 {
-    internal class UI
+    public class UI
     {
         public UI() {}
         /// <summary>
@@ -195,7 +195,7 @@ namespace Lab1
         /// <param name="reg">Шаблон регулярного выражения</param>
         /// <param name="str">Строка, введённая пользователем</param>
         /// <returns>Bool выражение прошли переданные данные проверку или нет</returns>
-        private static bool Validate(Regex reg, string? str)
+        public static bool Validate(Regex reg, string? str)
         {
             return reg.IsMatch(str);
         }
@@ -206,7 +206,7 @@ namespace Lab1
         /// <param name="minNumber">Минимальное допустимое число</param>
         /// <param name="maxNumber">Максимальное допустимое число</param>
         /// <returns>Bool выражение прошли переданные данные проверку или нет</returns>
-        private static bool Validate(string? str, int minNumber, int maxNumber)
+        public static bool Validate(string? str, int minNumber, int maxNumber)
         {
             int result;
             if(Int32.TryParse(str, out result))

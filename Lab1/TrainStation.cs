@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection.Metadata.Ecma335;
 
-class TrainStation
+public class TrainStation
 {
     public string StationName { get; set; } // Наименование станции
     public int SeatsNumber { get; set; } // Число мест

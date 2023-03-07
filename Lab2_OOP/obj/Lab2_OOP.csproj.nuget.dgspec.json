@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\egorunlucked\\source\\repos\\Lab2_OOP\\Lab2_OOP\\Lab2_OOP.csproj": {}
+    "C:\\Users\\izgar\\source\\repos\\Lab1_OOP\\Lab2_OOP\\Lab2_OOP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\egorunlucked\\source\\repos\\Lab1_OOP\\Lab1\\Lab1.csproj": {
+    "C:\\Users\\izgar\\source\\repos\\Lab1_OOP\\Lab1\\Lab1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\egorunlucked\\source\\repos\\Lab1_OOP\\Lab1\\Lab1.csproj",
+        "projectUniqueName": "C:\\Users\\izgar\\source\\repos\\Lab1_OOP\\Lab1\\Lab1.csproj",
         "projectName": "Lab1",
-        "projectPath": "C:\\Users\\egorunlucked\\source\\repos\\Lab1_OOP\\Lab1\\Lab1.csproj",
-        "packagesPath": "C:\\Users\\egorunlucked\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\egorunlucked\\source\\repos\\Lab1_OOP\\Lab1\\obj\\",
+        "projectPath": "C:\\Users\\izgar\\source\\repos\\Lab1_OOP\\Lab1\\Lab1.csproj",
+        "packagesPath": "C:\\Users\\izgar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\izgar\\source\\repos\\Lab1_OOP\\Lab1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\egorunlucked\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\izgar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,21 +55,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\egorunlucked\\source\\repos\\Lab2_OOP\\Lab2_OOP\\Lab2_OOP.csproj": {
+    "C:\\Users\\izgar\\source\\repos\\Lab1_OOP\\Lab2_OOP\\Lab2_OOP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\egorunlucked\\source\\repos\\Lab2_OOP\\Lab2_OOP\\Lab2_OOP.csproj",
+        "projectUniqueName": "C:\\Users\\izgar\\source\\repos\\Lab1_OOP\\Lab2_OOP\\Lab2_OOP.csproj",
         "projectName": "Lab2_OOP",
-        "projectPath": "C:\\Users\\egorunlucked\\source\\repos\\Lab2_OOP\\Lab2_OOP\\Lab2_OOP.csproj",
-        "packagesPath": "C:\\Users\\egorunlucked\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\egorunlucked\\source\\repos\\Lab2_OOP\\Lab2_OOP\\obj\\",
+        "projectPath": "C:\\Users\\izgar\\source\\repos\\Lab1_OOP\\Lab2_OOP\\Lab2_OOP.csproj",
+        "packagesPath": "C:\\Users\\izgar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\izgar\\source\\repos\\Lab1_OOP\\Lab2_OOP\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\egorunlucked\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\izgar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -83,8 +83,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\egorunlucked\\source\\repos\\Lab1_OOP\\Lab1\\Lab1.csproj": {
-                "projectPath": "C:\\Users\\egorunlucked\\source\\repos\\Lab1_OOP\\Lab1\\Lab1.csproj"
+              "C:\\Users\\izgar\\source\\repos\\Lab1_OOP\\Lab1\\Lab1.csproj": {
+                "projectPath": "C:\\Users\\izgar\\source\\repos\\Lab1_OOP\\Lab1\\Lab1.csproj"
               }
             }
           }
@@ -117,7 +117,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

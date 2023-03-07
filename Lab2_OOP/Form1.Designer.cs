@@ -1,6 +1,6 @@
 ﻿namespace Lab2_OOP
 {
-    partial class ShowStations
+    partial class ShowStationsForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -176,7 +176,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "ShowStations";
+            this.Name = "ShowStationsForm";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

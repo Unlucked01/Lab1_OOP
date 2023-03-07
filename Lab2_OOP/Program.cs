@@ -9,7 +9,7 @@ namespace Lab2_OOP
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new ShowStations());
+            Application.Run(new ShowStationsForm());
         }
     }
 }

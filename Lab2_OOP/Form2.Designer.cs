@@ -1,6 +1,6 @@
 ﻿namespace Lab2_OOP
 {
-    partial class AddStation
+    partial class AddStationForm
     {
         /// <summary>
         /// Required designer variable.
@@ -275,7 +275,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "AddStation";
+            this.Name = "AddStationStack";
             this.Text = "Добавление станции";
             this.ResumeLayout(false);
             this.PerformLayout();

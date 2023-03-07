@@ -9,14 +9,18 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Lab1;
+using static System.Windows.Forms.DataFormats;
 
 namespace Lab2_OOP
 {
-    public partial class AddStation : Form
+    public partial class AddStationForm : Form
     {
-        public AddStation()
+        private Stack<TrainStation> trainStations;
+        public AddStationForm(Stack<TrainStation> stakObj)
         {
             InitializeComponent();
+            button2.DialogResult = DialogResult.OK;
+            trainStations = stakObj;
             
         }
         private void button2_Click(object sender, EventArgs e)
@@ -124,10 +128,8 @@ namespace Lab2_OOP
             }
             /*Convert.ToDecimal(textBox6)*/ /*UI.Validate(regexBool, textBox7.Text)*/
             TrainStation stn = new(textBox1.Text, Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text), textBox4.Text, Convert.ToInt32(textBox5.Text), 11.2m, true);
-            ShowStations.AddStation(stn);
-            ShowStations primalForm = new ShowStations();
-            primalForm.Show();
-            this.Hide();
+            trainStations.Push(stn);
+            this.Close();
             //ShowStations.PrintNewStation();
         }
     }
