@@ -81,10 +81,10 @@ public class TrainStation
     {
         return fieldName switch
         {
-            "SeatsNumber" => SeatsNumber,
-            "TicketsSold" => (int)TicketsSold,
-            "TrainsPerDay" => TrainsPerDay,
-            "AverageTicketPrice" => (int)AverageTicketPrice,
+            "Число мест" => SeatsNumber,
+            "Число проданных билетов" => TicketsSold,
+            "Количество поездов в день" => TrainsPerDay,
+            "Средняя стоимость билета" => (int)AverageTicketPrice,
             _ => 0, //default
         };
     }

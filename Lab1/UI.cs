@@ -71,7 +71,7 @@ namespace Lab1
             TrainStation station2 = new("Сочи", 200, 500, "Приморский район", 100, 150.00m, false);
             stations.Add(station1);
             stations.Add(station2);
-            PrintIntToHex(station2.GetIntField("SeatsNumber"));
+            PrintIntToHex(station2.GetIntField("Число мест"));
             foreach (TrainStation station in stations)
             {
                 Console.WriteLine(station.ToString());
