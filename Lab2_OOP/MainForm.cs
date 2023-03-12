@@ -1,4 +1,5 @@
 using Lab1;
+using System.Runtime.InteropServices;
 using static System.Collections.Specialized.BitVector32;
 
 namespace Lab2_OOP
@@ -50,5 +51,24 @@ namespace Lab2_OOP
             ChangeObjForm changeObjForm = new ChangeObjForm(this, stationStack);
             changeObjForm.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                throw new MyDivideByZeroException();
+            }
+            catch (MyDivideByZeroException ex)
+            {
+                Win32.MessageBox(0, ex.Message, "Вызов ошибки", 0);
+            }
+        }
     }
+    public class Win32
+    {
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        public static extern IntPtr MessageBox(int hWnd, String text,
+        String caption, uint type);
+    }
+
 }
