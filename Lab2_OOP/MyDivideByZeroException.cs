@@ -8,7 +8,6 @@ namespace Lab2_OOP
 {
     internal class MyDivideByZeroException : DivideByZeroException
     {
-        public MyDivideByZeroException(): base("Деление на ноль невозможно!")
-        { }
+        public MyDivideByZeroException(): base("Деление на ноль невозможно!") { }
     }
 }

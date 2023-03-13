@@ -36,7 +36,7 @@ namespace Lab2_OOP
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AddStationForm additionalForm = new AddStationForm(this, stationStack);
+            AddStationForm additionalForm = new AddStationForm(this, stationStack, "Add");
             additionalForm.Show();
         }
 
@@ -48,8 +48,8 @@ namespace Lab2_OOP
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ChangeObjForm changeObjForm = new ChangeObjForm(this, stationStack);
-            changeObjForm.Show();
+            AddStationForm additionalForm = new AddStationForm(this, stationStack, "Edit");
+            additionalForm.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
