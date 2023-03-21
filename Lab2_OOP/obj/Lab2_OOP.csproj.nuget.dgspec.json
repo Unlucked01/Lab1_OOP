@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\egorunlucked\\Source\\Repos\\Lab_OOP\\Lab2_OOP\\Lab2_OOP.csproj": {}
+    "C:\\Users\\egorunlucked\\Source\\Repos\\Lab_OOP3\\Lab2_OOP\\Lab2_OOP.csproj": {}
   },
   "projects": {
     "C:\\Users\\egorunlucked\\Source\\Repos\\Lab1_OOP\\Lab1\\Lab1.csproj": {
@@ -59,14 +59,14 @@
         }
       }
     },
-    "C:\\Users\\egorunlucked\\Source\\Repos\\Lab_OOP\\Lab2_OOP\\Lab2_OOP.csproj": {
+    "C:\\Users\\egorunlucked\\Source\\Repos\\Lab_OOP3\\Lab2_OOP\\Lab2_OOP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\egorunlucked\\Source\\Repos\\Lab_OOP\\Lab2_OOP\\Lab2_OOP.csproj",
+        "projectUniqueName": "C:\\Users\\egorunlucked\\Source\\Repos\\Lab_OOP3\\Lab2_OOP\\Lab2_OOP.csproj",
         "projectName": "Lab2_OOP",
-        "projectPath": "C:\\Users\\egorunlucked\\Source\\Repos\\Lab_OOP\\Lab2_OOP\\Lab2_OOP.csproj",
+        "projectPath": "C:\\Users\\egorunlucked\\Source\\Repos\\Lab_OOP3\\Lab2_OOP\\Lab2_OOP.csproj",
         "packagesPath": "C:\\Users\\egorunlucked\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\egorunlucked\\Source\\Repos\\Lab_OOP\\Lab2_OOP\\obj\\",
+        "outputPath": "C:\\Users\\egorunlucked\\Source\\Repos\\Lab_OOP3\\Lab2_OOP\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\egorunlucked\\AppData\\Roaming\\NuGet\\NuGet.Config",

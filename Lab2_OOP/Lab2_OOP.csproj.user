@@ -13,5 +13,8 @@
     <Compile Update="AddObjForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="PerformanceTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

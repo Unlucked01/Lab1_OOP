@@ -63,6 +63,12 @@ namespace Lab2_OOP
                 Win32.MessageBox(0, ex.Message, "Вызов ошибки", 0);
             }
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            PerformanceTest test = new PerformanceTest(this, stackStack);
+            test.Show();
+        }
     }
     public class Win32
     {
