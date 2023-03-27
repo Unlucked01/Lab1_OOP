@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoadingForm));
             label1 = new Label();
             pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -36,14 +37,14 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(147, 43);
+            label1.Location = new Point(119, 36);
             label1.Name = "label1";
-            label1.Size = new Size(485, 64);
+            label1.Size = new Size(0, 32);
             label1.TabIndex = 0;
-            label1.Text = "              Пожалуйста, подожите, \r\nвыполняется замер производительности...";
             // 
             // pictureBox1
             // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(250, 152);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(251, 251);

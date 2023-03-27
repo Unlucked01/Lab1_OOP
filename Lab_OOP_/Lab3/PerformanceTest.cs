@@ -18,13 +18,13 @@ namespace Lab2_OOP
 {
     public partial class PerformanceTest : Form
     {
-        private TrainStationStack<TrainStation>? trainStations = new();
+        public TrainStationStack<TrainStation>? trainStations = new();
         private static readonly int N = 1000;
         private static readonly string reference = "test";
         TrainStation? tempStation;
         private TrainStation[] arrStations = new TrainStation[N];
         private ShowStationsForm showStationsForm;
-        public PerformanceTest(ShowStationsForm form, TrainStationStack<TrainStation> stackObj)
+        public PerformanceTest(ShowStationsForm form)
         {
             InitializeComponent();
             showStationsForm = form;
@@ -137,13 +137,8 @@ namespace Lab2_OOP
             }
             MeasureElapsedTime("Stack", trainStations, reference, st => st.StationName = reference);
             MeasureElapsedTime("Array", arrStations, reference, st => st.StationName = reference);
-            load.Hide();
+            load.Close();
             button2.Enabled = false;
-        }
-
-        private void PerformanceTest_Load(object sender, EventArgs e)
-        {
-            
         }
     }
 }

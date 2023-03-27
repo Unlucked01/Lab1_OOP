@@ -29,6 +29,8 @@ namespace Lab2_OOP
                 label9.Visible = true;
                 comboBox2.Visible = true;
                 button3.Visible = true;
+                button2.Visible = false;
+                button3.Location = button2.Location;
                 foreach (TrainStation elem in trainStations)
                 {
                     comboBox2.Items.Add(elem.StationName);
@@ -77,65 +79,6 @@ namespace Lab2_OOP
                 print(tempStation);
             }
         }
-
-        //private bool validate()
-        //{
-        //    checkBox1.Checked = UI.Validate(regexString, textBox1.Text);
-        //    checkBox2.Checked = (numericUpDown4.Value >= 0m);
-        //    checkBox3.Checked = (numericUpDown3.Value >= 0m);
-        //    checkBox4.Checked = UI.Validate(regexString, textBox4.Text);
-        //    checkBox5.Checked = (numericUpDown2.Value >= 0m);
-        //    checkBox6.Checked = (numericUpDown1.Value >= 0m);
-        //    checkBox7.Checked = (comboBox1.SelectedIndex != -1);
-        //    return Controls.OfType<CheckBox>().All(c => c.Checked);
-        //}
-        //private void negativeSituation()
-        //{
-        //    foreach (Control control in this.Controls)
-        //    {
-        //        if (control is CheckBox checkBox)
-        //        {
-        //            if (checkBox.Checked)
-        //            {
-        //                continue;
-        //            }
-        //            else
-        //            {
-        //                switch (checkBox.Name)
-        //                {
-        //                    //case "checkBox1":
-        //                    //    MessageBox.Show("Введите корректное название станции(допускаются только символы Кириллицы)!");
-        //                    //    textBox1.BackColor = Color.Red;
-        //                    //    break;
-        //                    case "checkBox2":
-        //                        MessageBox.Show("Введите корректное чило сидячих мест!");
-        //                        numericUpDown4.BackColor = Color.Red;
-        //                        break;
-        //                    case "checkBox3":
-        //                        MessageBox.Show("Введите корректное число проданных билетов!");
-        //                        numericUpDown3.BackColor = Color.Red;
-        //                        break;
-        //                    //case "checkBox4":
-        //                    //    MessageBox.Show("Введите корректное местоположение станции(допускаются только символы Кириллицы)!");
-        //                    //    textBox4.BackColor = Color.Red;
-        //                    //    break;
-        //                    case "checkBox5":
-        //                        MessageBox.Show("Введите корректное число поездов в день!");
-        //                        numericUpDown2.BackColor = Color.Red;
-        //                        break;
-        //                    case "checkBox6":
-        //                        MessageBox.Show("Введите корректные данные о средней стоимости билета(неотрицательное вещественное число)!");
-        //                        numericUpDown1.BackColor = Color.Red;
-        //                        break;
-        //                    case "checkBox7":
-        //                        MessageBox.Show("Выберите корректную информацию о наличии WIFI на станции (Да или Нет)!");
-        //                        break;
-        //                }
-        //            }
-
-        //        }
-        //    }
-        //}
 
         private void button3_Click(object sender, EventArgs e)
         {

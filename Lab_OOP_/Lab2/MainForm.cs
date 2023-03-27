@@ -7,14 +7,16 @@ namespace Lab2_OOP
 {
     public partial class ShowStationsForm : Form
     {
-        static TrainStationStack<TrainStation> stationStack = new();
-        StackListener<TrainStation> listener = new(stationStack);
+        static readonly TrainStationStack<TrainStation>? stationStack = new();
+        readonly StackListener<TrainStation> listener = new(stationStack);
+        PerformanceTest test;
 
         public ShowStationsForm()
         {
             InitializeComponent();
             stationStack.Push(new("Пенза", 500, 200, "Центральный район", 10, 15.00m, true));
             ViewGridStation(stationStack);
+            button8.Visible = false;
         }
         public void ViewGridStation(Stack<TrainStation> stationStack)
         {
@@ -66,17 +68,28 @@ namespace Lab2_OOP
                 Win32.MessageBox(0, ex.Message, "Âûçîâ îøèáêè", 0);
             }
         }
-
         private void button6_Click(object sender, EventArgs e)
         {
-            PerformanceTest test = new PerformanceTest(this, stationStack);
+            test = new PerformanceTest(this);
             test.Show();
+            button8.Visible = true;
+            button7.Visible = false;
+            button8.Location = button7.Location;
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             stationStack.Pop();
             ViewGridStation(stationStack);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            TrainStationStack<TrainStation>? tempStations = test.trainStations;
+            for (int i = 0; i < tempStations.Count; i++)
+            {
+                dataGridView1.Rows.Clear();
+            }
         }
     }
     public class Win32
