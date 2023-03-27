@@ -21,10 +21,7 @@ namespace Lab_OOP_.Lab2
             this.ControlBox = false;
             this.ShowInTaskbar = false;
             this.ShowIcon = false;
-            label1.Text = "Пожалуйста, подожите, \r\nвыполняется замер производительности...";
-            label1.Show();
             pictureBox1.Image = Image.FromFile("C:\\Users\\Surface\\source\\repos\\Lab_OOP_\\Lab_OOP_\\Lab3\\loading-gif.gif");
-            pictureBox1.Show();
         }
     }
 }

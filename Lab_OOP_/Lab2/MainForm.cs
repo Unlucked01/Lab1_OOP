@@ -1,7 +1,6 @@
 ﻿using Lab_OOP_.Lab3;
 using Lab1;
 using System.Runtime.InteropServices;
-using static System.Collections.Specialized.BitVector32;
 
 namespace Lab2_OOP
 {
@@ -43,6 +42,7 @@ namespace Lab2_OOP
         {
             AddStationForm additionalForm = new AddStationForm(this, stationStack, "Add");
             additionalForm.Show();
+            button7.Enabled = true;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -55,6 +55,7 @@ namespace Lab2_OOP
         {
             AddStationForm additionalForm = new AddStationForm(this, stationStack, "Edit");
             additionalForm.Show();
+            button7.Enabled = true;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -65,7 +66,7 @@ namespace Lab2_OOP
             }
             catch (MyDivideByZeroException ex)
             {
-                Win32.MessageBox(0, ex.Message, "Âûçîâ îøèáêè", 0);
+                Win32.MessageBox(0, ex.Message, "Деление на 0 невозможно!", 0);
             }
         }
         private void button6_Click(object sender, EventArgs e)
@@ -79,8 +80,16 @@ namespace Lab2_OOP
 
         private void button7_Click(object sender, EventArgs e)
         {
-            stationStack.Pop();
-            ViewGridStation(stationStack);
+            if(stationStack.Count > 0)
+            {
+                stationStack.Pop();
+                ViewGridStation(stationStack);
+            }
+            else
+            {
+                MessageBox.Show("Стек пуст!");
+                button7.Enabled = false;
+            }
         }
 
         private void button8_Click(object sender, EventArgs e)
