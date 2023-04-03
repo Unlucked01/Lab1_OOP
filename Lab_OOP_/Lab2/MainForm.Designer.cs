@@ -44,6 +44,7 @@
             button6 = new Button();
             button7 = new Button();
             button8 = new Button();
+            button9 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -53,18 +54,18 @@
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.AllowUserToResizeColumns = false;
             dataGridView1.AllowUserToResizeRows = false;
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7 });
+            dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.EditMode = DataGridViewEditMode.EditProgrammatically;
-            dataGridView1.Location = new Point(12, 12);
+            dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 82;
             dataGridView1.RowTemplate.Height = 41;
-            dataGridView1.Size = new Size(1660, 270);
+            dataGridView1.Size = new Size(1685, 404);
             dataGridView1.TabIndex = 0;
             // 
             // Column1
@@ -118,7 +119,7 @@
             // 
             // button1
             // 
-            button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             button1.Location = new Point(1205, 347);
             button1.Name = "button1";
             button1.Size = new Size(231, 46);
@@ -129,7 +130,7 @@
             // 
             // button2
             // 
-            button2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             button2.Location = new Point(1442, 347);
             button2.Name = "button2";
             button2.Size = new Size(231, 46);
@@ -140,7 +141,8 @@
             // 
             // button3
             // 
-            button3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button3.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            button3.Enabled = false;
             button3.Location = new Point(958, 295);
             button3.Name = "button3";
             button3.Size = new Size(354, 46);
@@ -151,7 +153,8 @@
             // 
             // button4
             // 
-            button4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button4.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            button4.Enabled = false;
             button4.Location = new Point(1318, 295);
             button4.Name = "button4";
             button4.Size = new Size(354, 46);
@@ -162,6 +165,7 @@
             // 
             // button5
             // 
+            button5.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             button5.Location = new Point(12, 347);
             button5.Name = "button5";
             button5.Size = new Size(150, 46);
@@ -172,8 +176,9 @@
             // 
             // button6
             // 
-            button6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button6.Location = new Point(941, 347);
+            button6.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            button6.Enabled = false;
+            button6.Location = new Point(691, 294);
             button6.Name = "button6";
             button6.Size = new Size(258, 46);
             button6.TabIndex = 6;
@@ -183,8 +188,8 @@
             // 
             // button7
             // 
-            button7.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button7.Location = new Point(701, 347);
+            button7.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            button7.Location = new Point(964, 347);
             button7.Name = "button7";
             button7.Size = new Size(234, 46);
             button7.TabIndex = 7;
@@ -194,8 +199,8 @@
             // 
             // button8
             // 
-            button8.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button8.Location = new Point(701, 295);
+            button8.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            button8.Location = new Point(721, 347);
             button8.Name = "button8";
             button8.Size = new Size(234, 46);
             button8.TabIndex = 8;
@@ -203,11 +208,22 @@
             button8.UseVisualStyleBackColor = true;
             button8.Click += button8_Click;
             // 
+            // button9
+            // 
+            button9.Location = new Point(537, 347);
+            button9.Name = "button9";
+            button9.Size = new Size(178, 46);
+            button9.TabIndex = 9;
+            button9.Text = "LINQ";
+            button9.UseVisualStyleBackColor = true;
+            button9.Click += button9_Click;
+            // 
             // ShowStationsForm
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1685, 404);
+            Controls.Add(button9);
             Controls.Add(button8);
             Controls.Add(button7);
             Controls.Add(button6);
@@ -243,5 +259,6 @@
         private Button button6;
         private Button button7;
         private Button button8;
+        private Button button9;
     }
 }

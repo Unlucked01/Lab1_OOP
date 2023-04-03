@@ -249,10 +249,12 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            KeyPreview = true;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "AddStationForm";
             Text = "Добавление\\Изменение станции";
+            KeyDown += AddStationForm_KeyDown;
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown3).EndInit();

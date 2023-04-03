@@ -16,12 +16,13 @@ namespace Lab_OOP_.Lab2
         public LoadingForm()
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.CenterScreen;
             this.TopMost = true;
             this.ControlBox = false;
             this.ShowInTaskbar = false;
             this.ShowIcon = false;
-            pictureBox1.Image = Image.FromFile("C:\\Users\\Surface\\source\\repos\\Lab_OOP_\\Lab_OOP_\\Lab3\\loading-gif.gif");
+            this.label1.Show();
+            this.pictureBox1.Show();
+            //pictureBox1.Image = Image.FromFile("C:\\Users\\Surface\\source\\repos\\Lab_OOP_\\Lab_OOP_\\Lab3\\loading-gif.gif");
         }
     }
 }

@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoadingForm));
             label1 = new Label();
             pictureBox1 = new PictureBox();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -51,11 +52,21 @@
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(148, 36);
+            label2.Name = "label2";
+            label2.Size = new Size(492, 64);
+            label2.TabIndex = 2;
+            label2.Text = "              Пожалуйста подождите,\r\nвыполняется подсчёт производительности";
+            // 
             // LoadingForm
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label2);
             Controls.Add(pictureBox1);
             Controls.Add(label1);
             Name = "LoadingForm";
@@ -69,5 +80,6 @@
 
         private Label label1;
         private PictureBox pictureBox1;
+        private Label label2;
     }
 }

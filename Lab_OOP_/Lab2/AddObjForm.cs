@@ -101,7 +101,7 @@ namespace Lab2_OOP
             string input = textBox1.Text.Trim();
             if (!UI.Validate(regexString, input))
             {
-                MessageBox.Show("Введите корректное название станции(допускаются только символы Кириллицы)!");
+                MessageBox.Show("Введите корректное название станции(допускаются только символы Кириллицы)!","Внимание");
                 textBox1.Focus();
             }
         }
@@ -111,8 +111,16 @@ namespace Lab2_OOP
             string input = textBox4.Text.Trim();
             if (!UI.Validate(regexString, input))
             {
-                MessageBox.Show("Введите корректное название станции(допускаются только символы Кириллицы)!");
+                MessageBox.Show("Введите корректное название станции(допускаются только символы Кириллицы)!","Внимание");
                 textBox4.Focus();
+            }
+        }
+
+        private void AddStationForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
             }
         }
     }

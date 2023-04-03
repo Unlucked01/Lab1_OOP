@@ -24,25 +24,23 @@ namespace Lab_OOP_.Lab3
         public T Item { get; }
     }
 
-    public delegate void StackChangedEventHandler<T>(object sender, StackChangedEventArgs<T> e);
+    public delegate void StackChangedEventHandler<T> (object sender, StackChangedEventArgs<T> e);
 
     public class TrainStationStack<T> : Stack<T>
     {
-        public event StackChangedEventHandler<T> StackChanged;
+        public event StackChangedEventHandler<T>? StackChanged;
 
         public new void Push(T item)
         {
             base.Push(item);
             OnStackChanged(StackAction.Push, item);
         }
-
         public new T Pop()
         {
             T item = base.Pop();
             OnStackChanged(StackAction.Pop, item);
             return item;
         }
-
         protected virtual void OnStackChanged(StackAction action, T item)
         {
             StackChanged?.Invoke(this, new StackChangedEventArgs<T>(action, item));
@@ -51,7 +49,7 @@ namespace Lab_OOP_.Lab3
 
     public class StackListener<T>
     {
-        private TrainStationStack<T> _stack;
+        private readonly TrainStationStack<T> _stack;
 
         public StackListener(TrainStationStack<T> stack)
         {
@@ -62,7 +60,7 @@ namespace Lab_OOP_.Lab3
         private void OnStackChanged(object sender, StackChangedEventArgs<T> e)
         {
             MessageBox.Show($"Действие: {e.Action}, " +
-                $"Станция:\n{e.Item}");
+                $"Станция:\n{e.Item}", "Событие");
         }
     }
 

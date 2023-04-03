@@ -1,4 +1,5 @@
 ﻿using Lab_OOP_.Lab3;
+using Lab_OOP_.Lab4;
 using Lab1;
 using System.Runtime.InteropServices;
 
@@ -17,7 +18,7 @@ namespace Lab2_OOP
             ViewGridStation(stationStack);
             button8.Visible = false;
         }
-        public void ViewGridStation(Stack<TrainStation> stationStack)
+        public void ViewGridStation(dynamic stationStack)
         {
             dataGridView1.Rows.Clear();
             foreach (TrainStation tempStation in stationStack)
@@ -80,14 +81,14 @@ namespace Lab2_OOP
 
         private void button7_Click(object sender, EventArgs e)
         {
-            if(stationStack.Count > 0)
+            if (stationStack.Count > 0)
             {
                 stationStack.Pop();
                 ViewGridStation(stationStack);
             }
             else
             {
-                MessageBox.Show("Стек пуст!");
+                MessageBox.Show("Стек пуст!", "Внимание");
                 button7.Enabled = false;
             }
         }
@@ -99,6 +100,17 @@ namespace Lab2_OOP
             {
                 dataGridView1.Rows.Clear();
             }
+            button8.Visible = false;
+            button8.Enabled = false;
+            button7.Visible = true;
+            button8.Location = button7.Location;
+            ViewGridStation(stationStack);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            LINQ LinqForm = new LINQ(this);
+            LinqForm.Show();
         }
     }
     public class Win32

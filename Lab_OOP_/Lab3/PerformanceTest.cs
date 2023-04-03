@@ -1,5 +1,6 @@
 ﻿using Lab_OOP_.Lab2;
 using Lab_OOP_.Lab3;
+using Microsoft.VisualBasic;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,7 +13,6 @@ using System.Security.Cryptography.Xml;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Lab2_OOP
 {
@@ -20,7 +20,7 @@ namespace Lab2_OOP
     {
         public TrainStationStack<TrainStation>? trainStations = new();
         private static readonly int N = 1000;
-        private static readonly string reference = "test";
+        private static readonly string reference = "Пенза";
         TrainStation? tempStation;
         private TrainStation[] arrStations = new TrainStation[N];
         private ShowStationsForm showStationsForm;
@@ -30,14 +30,38 @@ namespace Lab2_OOP
             showStationsForm = form;
 
             listView1.View = View.Details;
-            listView1.Columns.Add("Collection");
-            listView1.Columns.Add("ElapsedTimeNormally");
-            listView1.Columns.Add("ElapsedTimeRandomly");
+            listView1.Columns.Add("Коллекция");
+            listView1.Columns.Add("Последовательная выборка");
+            listView1.Columns.Add("Случайная выборка");
             listView1.Columns[0].Width = 350;
             listView1.Columns[1].Width = 350;
             listView1.Columns[2].Width = 350;
         }
-        private string rndstringbuilder()
+
+        private async void button2_Click(object sender, EventArgs e)
+        {
+            LoadingForm load = new();
+            load.Show();
+            Thread Generate = new Thread(new ThreadStart(generate));
+            Generate.Start();
+            
+            load.Close();
+            button2.Enabled = false;
+        }
+        void generate()
+        {
+            for (int i = 0; i < N; i++)
+            {
+                trainStations.Push(new TrainStation(rndstringbuilder(), rndint(), rndint(), rndstringbuilder(), rndint(), Convert.ToInt32(rndint()), rndbool()));
+                arrStations[i] = new TrainStation(rndstringbuilder(), rndint(), rndint(), rndstringbuilder(), rndint(), Convert.ToInt32(rndint()), rndbool());
+            }
+        }
+        //async Task asyncMethod()
+        //{
+        //    MeasureElapsedTime("Array", arrStations, reference, st => st.StationName = reference);
+        //    await Task.Run(() => MeasureElapsedTime("Stack", trainStations, reference, st => st.StationName = reference));
+        //}
+        public string rndstringbuilder()
         {
             Random rnd = new Random();
             int start = 0x0410; //a
@@ -51,12 +75,12 @@ namespace Lab2_OOP
             }
             return builder.ToString();
         }
-        private int rndint()
+        public int rndint()
         {
             Random rnd = new Random();
             return rnd.Next(0, 10000);
         }
-        private bool rndbool()
+        public bool rndbool()
         {
             Random rnd = new Random();
             return rnd.Next(0, 2) == 0;
@@ -124,21 +148,6 @@ namespace Lab2_OOP
             listView1.Items.Add(item);
 
             showStationsForm.ViewGridStation(stationStack: trainStations);
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            LoadingForm load = new LoadingForm();
-            load.Show();
-            for (int i = 0; i < N; i++)
-            {
-                trainStations.Push(new TrainStation(rndstringbuilder(), rndint(), rndint(), rndstringbuilder(), rndint(), Convert.ToInt32(rndint()), rndbool()));
-                arrStations[i] = new TrainStation(rndstringbuilder(), rndint(), rndint(), rndstringbuilder(), rndint(), Convert.ToInt32(rndint()), rndbool());
-            }
-            MeasureElapsedTime("Stack", trainStations, reference, st => st.StationName = reference);
-            MeasureElapsedTime("Array", arrStations, reference, st => st.StationName = reference);
-            load.Close();
-            button2.Enabled = false;
         }
     }
 }
