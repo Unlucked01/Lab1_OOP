@@ -61,13 +61,16 @@ public class TrainStation
     /// </returns>
     public override string ToString()
     {
-        return $"Наименование станции: {StationName}\n" +
+        return
+            "############################################\n" +
+            $"Наименование станции: {StationName}\n" +
             $"Местоположение: {Location}\n" +
             $"Количество мест:  {SeatsNumber} \n" +
             $"Продано билетов:  {TicketsSold} \n" +
             $"Количество поездов в день:  {TrainsPerDay} \n" +
             $"Средняя стоимость билета:  {AverageTicketPrice} \n" +
             $"Наличие Wi-Fi на станции:  {(HasWiFi ? "Да" : "Нет")}";
+            
     }
     /// <summary>
     /// Метод, возвращающий числовые значения полей

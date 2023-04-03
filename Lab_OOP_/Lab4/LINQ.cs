@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Lab_OOP_.Lab4
 {
@@ -32,11 +33,12 @@ namespace Lab_OOP_.Lab4
             stations.Push(new("Сочи", Rndint(), Rndint(), "Краснодарский край", Rndint(), Convert.ToDecimal(Rndint()), Rndint() % 2 == 0));
 
             listView1.View = View.Details;
-            listView1.Columns.Add("Запрос");
-            listView1.Columns.Add("Результат");
+
             listView1.Columns[0].Width = 1200;
             listView1.Columns[1].Width = 280;
+
             showStationsForm.ViewGridStation(stations);
+
         }
         private int Rndint()
         {
@@ -57,6 +59,8 @@ namespace Lab_OOP_.Lab4
 
         private void button2_Click(object sender, EventArgs e)
         {
+            listView1.Items.Clear();
+
             var request1 = stations.Where(s => s.HasWiFi).Count();
             var responce1 = new ListViewItem("Количество станций с наличием WIFI:");
             responce1.SubItems.Add(request1.ToString());
@@ -84,6 +88,17 @@ namespace Lab_OOP_.Lab4
             responce5.SubItems.Add(request5.StationName);
 
             listView1.Items.AddRange(new ListViewItem[] { responce1, responce2, responce3, responce4, responce5 });
+        }
+
+        private async void button4_Click(object sender, EventArgs e)
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+            foreach (var station in stations)
+            {
+                stringBuilder.AppendLine(station.ToString());
+            }
+            using StreamWriter writer = new(@"C:\Users\Surface\source\repos\Lab_OOP_\Lab_OOP_\OutputFiles\stations.txt", false);
+            await writer.WriteLineAsync(stringBuilder.ToString());
         }
     }
 }
