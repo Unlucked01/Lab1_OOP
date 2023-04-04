@@ -45,6 +45,7 @@
             button7 = new Button();
             button8 = new Button();
             button9 = new Button();
+            button10 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -200,9 +201,9 @@
             // button8
             // 
             button8.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            button8.Location = new Point(721, 347);
+            button8.Location = new Point(451, 295);
             button8.Name = "button8";
-            button8.Size = new Size(234, 46);
+            button8.Size = new Size(234, 47);
             button8.TabIndex = 8;
             button8.Text = "Очистить таблицу";
             button8.UseVisualStyleBackColor = true;
@@ -210,7 +211,7 @@
             // 
             // button9
             // 
-            button9.Location = new Point(537, 347);
+            button9.Location = new Point(780, 347);
             button9.Name = "button9";
             button9.Size = new Size(178, 46);
             button9.TabIndex = 9;
@@ -218,11 +219,22 @@
             button9.UseVisualStyleBackColor = true;
             button9.Click += button9_Click;
             // 
+            // button10
+            // 
+            button10.Location = new Point(624, 348);
+            button10.Name = "button10";
+            button10.Size = new Size(150, 46);
+            button10.TabIndex = 10;
+            button10.Text = "List-LINQ";
+            button10.UseVisualStyleBackColor = true;
+            button10.Click += button10_Click;
+            // 
             // ShowStationsForm
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1685, 404);
+            Controls.Add(button10);
             Controls.Add(button9);
             Controls.Add(button8);
             Controls.Add(button7);
@@ -260,5 +272,6 @@
         private Button button7;
         private Button button8;
         private Button button9;
+        private Button button10;
     }
 }

@@ -112,6 +112,12 @@ namespace Lab2_OOP
             LINQ LinqForm = new LINQ(this);
             LinqForm.Show();
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            ListLINQ listLINQForm = new ListLINQ();
+            listLINQForm.Show();
+        }
     }
     public class Win32
     {
