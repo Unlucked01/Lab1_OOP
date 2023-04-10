@@ -1,0 +1,14 @@
+C:\Users\Surface\source\repos\OOP_Sharp_LAB\lab_4\lab_3\bin\Release\lab_3.exe.config
+C:\Users\Surface\source\repos\OOP_Sharp_LAB\lab_4\lab_3\bin\Release\lab_3.exe
+C:\Users\Surface\source\repos\OOP_Sharp_LAB\lab_4\lab_3\bin\Release\lab_3.pdb
+C:\Users\Surface\source\repos\OOP_Sharp_LAB\lab_4\lab_3\obj\Release\lab_4.csproj.AssemblyReference.cache
+C:\Users\Surface\source\repos\OOP_Sharp_LAB\lab_4\lab_3\obj\Release\lab_4.csproj.SuggestedBindingRedirects.cache
+C:\Users\Surface\source\repos\OOP_Sharp_LAB\lab_4\lab_3\obj\Release\lab_4.MainForm.resources
+C:\Users\Surface\source\repos\OOP_Sharp_LAB\lab_4\lab_3\obj\Release\lab_4.LinqString.resources
+C:\Users\Surface\source\repos\OOP_Sharp_LAB\lab_4\lab_3\obj\Release\lab_4.LINQWindow.resources
+C:\Users\Surface\source\repos\OOP_Sharp_LAB\lab_4\lab_3\obj\Release\lab_3.Properties.Resources.resources
+C:\Users\Surface\source\repos\OOP_Sharp_LAB\lab_4\lab_3\obj\Release\lab_4.StringForm.resources
+C:\Users\Surface\source\repos\OOP_Sharp_LAB\lab_4\lab_3\obj\Release\lab_4.csproj.GenerateResource.cache
+C:\Users\Surface\source\repos\OOP_Sharp_LAB\lab_4\lab_3\obj\Release\lab_4.csproj.CoreCompileInputs.cache
+C:\Users\Surface\source\repos\OOP_Sharp_LAB\lab_4\lab_3\obj\Release\lab_3.exe
+C:\Users\Surface\source\repos\OOP_Sharp_LAB\lab_4\lab_3\obj\Release\lab_3.pdb
